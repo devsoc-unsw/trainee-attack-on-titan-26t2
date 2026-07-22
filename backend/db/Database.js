@@ -14,7 +14,7 @@ class Database {
      *   filename: 'lecture1.mp4',
      *   status: 'pending',
      * });
-     * 
+     *
      * // newJob => { id: 1, filename: 'lecture1.mp4', status: 'pending', ... }
      */
     static async insert(table, data) {

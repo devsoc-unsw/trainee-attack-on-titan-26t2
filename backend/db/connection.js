@@ -6,16 +6,16 @@ dotenv.config();
 const { Pool } = pg;
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false },
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false },
 });
 
 pool.on('connect', () => {
-  console.log('Connected to Neon database');
+    console.log('Connected to Neon database');
 });
 
 pool.on('error', (err) => {
-  console.error('Unexpected database error', err);
+    console.error('Unexpected database error', err);
 });
 
 export default pool;
